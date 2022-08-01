@@ -1,10 +1,12 @@
 import React from 'react'
 import { GoogleMap, useJsApiLoader } from '@react-google-maps/api';
-
+import Header from '../components/Header';
 
 const containerStyle = {
-  width: '100%',
-  height: '92vh'
+  width: '100vw',
+  height: '95vh',
+  position: 'relative',
+  top: 25
 };
 
 const center = {
@@ -19,6 +21,7 @@ function Map() {
   })
 
   return isLoaded ? (
+    
       <GoogleMap
         mapContainerStyle={containerStyle}
         center={center}
